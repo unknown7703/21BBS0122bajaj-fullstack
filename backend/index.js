@@ -1,6 +1,12 @@
 const express = require('express');
+const cors = require('cors'); // Import the cors middleware
+
 const app = express();
 
+// Enable CORS for all origins
+app.use(cors());
+
+// Parse JSON request bodies
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
