@@ -21,7 +21,7 @@ function App() {
         throw new Error('Invalid input format');
       }
 
-      const response = await fetch('<YOUR_BACKEND_URL>/bfhl', {
+      const response = await fetch('https://21bbs0122-bajaj-fullstack.vercel.app/bfhl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: jsonInput,
