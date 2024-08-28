@@ -3,10 +3,10 @@ const cors = require('cors'); // Import the cors middleware
 
 const app = express();
 
-// Enable CORS for all origins
+
 app.use(cors());
 
-// Parse JSON request bodies
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
@@ -47,12 +47,14 @@ const PORT = process.env.PORT || 3000;
 //     });
 // });
 app.get('/book', (req, res) => {
-    res.send('Booking successful');
-  });
+  res.json({ message: 'Booking successfull' });
+});
+
 
   app.get('/cancel', (req, res) => {
-    res.send('Booking cancled');
+    res.json({ message: 'Booking cancelled' });
   });
+  
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
